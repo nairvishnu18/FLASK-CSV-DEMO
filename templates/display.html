@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Web Case Study</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/styles2.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+            <a href="/"><i class="fa fa-arrow-circle-left" aria-hidden="true" id="back"></i></a>
+            <br/>
+            <h1> &nbsp;Display Details Of Students</h1>
+            <br>
+        </nav>
+
+        <div class="container">
+            <br>
+
+            <form action="/display" method="POST">
+                <div class="form-group text-left">
+                    <button id="displaybtn" class="btn btn-warning">Display</button>
+                </div>
+            </form>
+
+            <div>
+                <table class="table table-striped table-bordered  table-hover" id="displaytable">
+                    <thead >
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Gender</th>
+                        <th>DOB(YYYY-Mm-DD)</th>
+                        <th>City</th>
+                        <th> State</th>
+                        <th>Email</th>
+                        <th>Qualification</th>
+                        <th>Stream</th>
+                    </thead>
+                    <tbody color: white;">
+                    {% for data in results %}
+                        <tr>
+                            <td>{{data.Student_ID}}</td>
+                            <td>{{data.Student_Name}}</td>
+                            <td>{{data.Gender}}</td>
+                            <td>{{data.Date}}</td>
+                            <td>{{data.City}}</td>
+                            <td>{{data.State}}</td>
+                            <td>{{data.Email}}</td>
+                            <td>{{data.Qualification}}</td>
+                            <td>{{data.Stream}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
