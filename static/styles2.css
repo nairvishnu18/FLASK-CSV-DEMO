@@ -1,0 +1,30 @@
+body{
+	background-color: #f4f5f9;
+}
+
+.container{
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+
+.form-control{
+    width: 75%;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+
+}
+
+.text-center{
+    margin-left: -350px;
+}
+ 
+input[type="search"]{
+    border-radius: 15px;
+}
+
+.tbl{
+    margin-left: 50%;
+}
+
